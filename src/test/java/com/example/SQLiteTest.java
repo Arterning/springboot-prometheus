@@ -16,7 +16,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class SQLiteTest {
 
-    static final Logger log = LoggerFactory.getLogger(SqliteTest.class);
+    static final Logger log = LoggerFactory.getLogger(SQLiteTest.class);
 
     @Autowired
     JdbcTemplate jdbcTemplate;
