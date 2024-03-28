@@ -19,6 +19,10 @@ curl http://localhost:8080/actuator/prometheus | grep custom_request
 ## 查询过去5分钟的平均响应时间
 
 ```
+sum by (path) (custom_response_time_sum{application="springboot-prometheus",path!~""} / custom_request_total{application="springboot-prometheus",path!~""})
+```
+
+```
 sum by (path) (rate(custom_response_time_sum{application="springboot-prometheus",path!~""}[5m]) / rate(custom_request_total{application="springboot-prometheus",path!~""}[5m]))
 ```
 
